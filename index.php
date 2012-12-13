@@ -12,38 +12,46 @@
 				<?php get_template_part('nav')?>
 			</nav>
 			<div id="main">
-				<?php 
-				/**
-				 * Check to see if the current request...
-				 * is_category()
-				 * is_front_page()
-				 * is_home()
-				 * is_404
-				 * is_archive()
-				 * is_page
-				 * is_single() --> e.g. a single post
-				 * is_tag()
-				 * is_search() --> a page display search results
-				 */
-				if (is_front_page())	{
-					// Include file named content-home.php
-					get_template_part('content','home');
-					// Include file named content-single.php
-				} elseif (is_page() || is_single())	{
-					get_template_part('content','single');
-				}
+				<div class="row">
+				<!-- MAIN COLUMNS  -->
+				<div class="span9">
+					<?php 
+					/**
+					 * Check to see if the current request...
+					 * is_category()
+					 * is_front_page()
+					 * is_home()
+					 * is_404
+					 * is_archive()
+					 * is_page
+					 * is_single() --> e.g. a single post
+					 * is_tag()
+					 * is_search() --> a page display search results
+					 */
+					if (is_front_page())	{
+						// Include file named content-home.php
+						get_template_part('content','home');
+						// Include file named content-single.php
+					} elseif (is_page() || is_single())	{
+						get_template_part('content','single');
+					} elseif (is_search()) {
+						get_template_part('content','search');
+					} else{
+						get_template_part('content','blog');
+					}
+					?>
+			
+				</div>
 				
-				
-				?>
-			
-			
-			
-			
-			
+				<!-- RIGHT SIDEBAR  -->
+				<div class="span3">
+					<?php get_sidebar() ?>
+				</div>
 			</div>
+		</div>
 			<footer>
 				<?php get_footer() ?>			
 			</footer>
-		</div>
+	</div>
 	</body>
 </html>
