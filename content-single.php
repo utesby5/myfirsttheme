@@ -14,7 +14,7 @@
 		<?php if(comments_open){
 			
 			$comments = get_comments(array('post_id'=>$post->ID));
-			echo('<ul>');
+			echo('<ul class="my-comment">');
 			wp_list_comments(null,$comments);
 			echo('</ul>');
 			

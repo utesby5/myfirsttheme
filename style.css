@@ -157,6 +157,28 @@ form{
 h1.form-title { 
     font-family: "harryp", 'Playfair Display SC', serif;
 }
+ul.my-comment{
+	list-style:none;
+}
+
+
+
+li.comment{
+	border: 3px solid #808080;
+	border-radius: 6px;
+	padding: 10px;
+	background-color:#A8A8A8;  
+	color:#000;
+	margin: 20px;
+}
+
+
+li.comment-author-utesby5{
+	background-color:#4A4A4A !important;
+	color:#fff !important;
+	border: 3px solid #383838 !important;
+	
+}
 
 
 
