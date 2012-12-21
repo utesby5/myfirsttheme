@@ -2,17 +2,18 @@
 <html>
 	<head>
 		<?php get_header()?>
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="wrapper">
 				<header>
-					<h1><?php bloginfo('name')?></h1>
+					<h1><a href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a></h1>
 				</header>
 			<nav id="primary-nav">
 				<?php get_template_part('nav')?>
 			</nav>
 			<div id="main">
-				<div class="row">
+				<div class="row-fluid">
 				<!-- MAIN COLUMNS  -->
 				<div class="span9">
 					<?php 

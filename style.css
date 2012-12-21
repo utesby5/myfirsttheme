@@ -7,24 +7,57 @@ Description: This is a sample theme to be used to understand the wordpress theme
 Version: 1.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Tags: gradient red orange gray white
 */
+
+@font-face {
+    font-family: "harryp";
+    src: url(img/harryp_.TTF) format("truetype");
+}
+
+
+body{
+	background-image:-webkit-gradient(linear,0% 0%,0% 100%,from(#FFF),to(#BABABA));	
+	font-family: 'Playfair Display SC', serif;
+}
+
 #wrapper {
 	width: 940px;
 	margin: 0px auto;
+	
+	
 }
 
 header{
 	border:1px solid #bbb;
-	background-image:-webkit-gradient(linear,0% 0%,0% 100%,from(#fff),to(#960000));	
+	background-image:-webkit-gradient(linear,80% 0%,0% 0%,from(#FF5500),to(#960000));	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 header h1{
 	color:#808080;
+	font-family: "harryp", 'Playfair Display SC', serif;
+	font-size: 50px;
 }
 
+header h1 a{
+	display:inline-block;
+	color:#fff;
+
+}
+header h1 a:hover {
+	-webkit-transform: rotateX(120deg); /* Safari and Chrome */
+	text-decoration:none;
+	color:#fff;
+}
+
+
 nav{
-	background-color:#960000;
+	background-image:-webkit-gradient(linear, 80% 0%,0% 0%,from(#FF5500),to(#960000));
+	border:.5px solid #bbb;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
 }
 
 nav ul{
@@ -46,7 +79,7 @@ nav ul li a:hover{
 	color: #222;
 	background:#fff;
 }
-span.date{
+.meta{
 	color:#A80000;
 	padding: 5px 5px 5px 5px;
 	border: 1px solid #A80000;
@@ -56,6 +89,9 @@ span.date{
 }
 div.story-content{
 	margin-top: 20px;
+}
+a:-webkit-any-link{
+	text-decoration:none;
 }
 
 
@@ -71,5 +107,84 @@ div.footer{
 	text-align:center;
 	border: 1px solid #00A8A8;
 	border-radius: 6px;
-	background-color: #00A8A8;
+	color:#fff;
+	background-image:-webkit-gradient(linear,80% 0%,0% 0%,from(#960000),to(#FF5500));
 }
+
+
+#main .row .span div {
+	transition:background-color 0.5s;
+	-webkit-transition:background-color 2.0s;
+
+}
+
+
+.highlight{
+	background-color:#F2E527;
+}
+
+.post-title{
+	font-family: "harryp", 'Playfair Display SC', serif;
+	font-size:40px;
+}
+
+
+
+/**********************    Comment Form    **************************/
+h1.form-title {
+	
+	color:#960000;
+}
+
+.my-form{
+	margin-top:100px;
+	background-color:#878787;
+	padding-left:10px;
+	padding-bottom:5px;
+	border: 1px solid #fff;
+	border-radius: 6px;
+}
+comment-author vcard{
+	list-style:none;
+}
+form{
+	margin:0px;
+	
+}
+
+
+
+h1.form-title { 
+    font-family: "harryp", 'Playfair Display SC', serif;
+}
+
+
+
+/************************* RESPONSIVE DESIGN **********************/
+@media(max-width:480px) {
+	body {
+		background-image:none;
+		padding:0px;
+	}
+	#wrapper {
+		width:100%;
+	}
+	.post .img {
+		float:none;
+		width:100%;
+	}
+	
+	header h1{
+		font-size:30px;
+	}
+};
+
+
+
+
+
+
+
+
+
+
